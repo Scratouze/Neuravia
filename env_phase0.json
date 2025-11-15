@@ -1,0 +1,162 @@
+{
+    "Timestamp":  "2025-11-02T00:23:59",
+    "OS":  "Microsoft Windows 11 Professionnel 10.0.26200",
+    "Python":  "Python 3.13.3",
+    "PIP":  [
+                "pip 23.2.1 from C:\\Users\\horne\\Desktop\\Test1\\.venv\\Lib\\site-packages\\pip (python 3.13)",
+                ""
+            ],
+    "VenvActive":  true,
+    "Winget":  "v1.12.350",
+    "GPU":  [
+                "Sun Nov  2 00:24:06 2025       ",
+                "+-----------------------------------------------------------------------------------------+",
+                "| NVIDIA-SMI 576.80                 Driver Version: 576.80         CUDA Version: 12.9     |",
+                "|-----------------------------------------+------------------------+----------------------+",
+                "| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |",
+                "| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |",
+                "|                                         |                        |               MIG M. |",
+                "|=========================================+========================+======================|",
+                "|   0  NVIDIA GeForce RTX 2070      WDDM  |   00000000:01:00.0  On |                  N/A |",
+                "| 21%   46C    P0             36W /  175W |    1048MiB /   8192MiB |      7%      Default |",
+                "|                                         |                        |                  N/A |",
+                "+-----------------------------------------+------------------------+----------------------+",
+                "                                                                                         ",
+                "+-----------------------------------------------------------------------------------------+",
+                "| Processes:                                                                              |",
+                "|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |",
+                "|        ID   ID                                                               Usage      |",
+                "|=========================================================================================|",
+                "|    0   N/A  N/A             884    C+G   ...8bbwe\\PhoneExperienceHost.exe      N/A      |",
+                "|    0   N/A  N/A            2032    C+G   ...AcrobatNotificationClient.exe      N/A      |",
+                "|    0   N/A  N/A            2636    C+G   ...App_cw5n1h2txyewy\\LockApp.exe      N/A      |",
+                "|    0   N/A  N/A            7768    C+G   ...64__8wekyb3d8bbwe\\Copilot.exe      N/A      |",
+                "|    0   N/A  N/A            8328    C+G   C:\\Windows\\explorer.exe               N/A      |",
+                "|    0   N/A  N/A            8420    C+G   ...4__cv1g1gvanyjgm\\WhatsApp.exe      N/A      |",
+                "|    0   N/A  N/A            9860    C+G   ..._cw5n1h2txyewy\\SearchHost.exe      N/A      |",
+                "|    0   N/A  N/A           10200    C+G   ...Chrome\\Application\\chrome.exe      N/A      |",
+                "|    0   N/A  N/A           11024    C+G   ...crosoft\\OneDrive\\OneDrive.exe      N/A      |",
+                "|    0   N/A  N/A           12488    C+G   ...yb3d8bbwe\\Notepad\\Notepad.exe      N/A      |",
+                "|    0   N/A  N/A           13284    C+G   ...indows\\System32\\ShellHost.exe      N/A      |",
+                "|    0   N/A  N/A           14720    C+G   ...5n1h2txyewy\\TextInputHost.exe      N/A      |",
+                "|    0   N/A  N/A           16068    C+G   ... 2024.3.1.1\\bin\\pycharm64.exe      N/A      |",
+                "|    0   N/A  N/A           17560    C+G   ...y\\StartMenuExperienceHost.exe      N/A      |",
+                "|    0   N/A  N/A           18236    C+G   ....0.3537.99\\msedgewebview2.exe      N/A      |",
+                "+-----------------------------------------------------------------------------------------+"
+            ],
+    "Tesseract":  "absent",
+    "Playwright":  {
+                       "Exception":  {
+                                         "SerializedRemoteException":  null,
+                                         "SerializedRemoteInvocationInfo":  null,
+                                         "ErrorRecord":  {
+                                                             "Exception":  {
+                                                                               "Message":  "C:\\Users\\horne\\Desktop\\Test1\\.venv\\Scripts\\python.exe: No module named playwright",
+                                                                               "Data":  {
+
+                                                                                        },
+                                                                               "InnerException":  null,
+                                                                               "TargetSite":  null,
+                                                                               "StackTrace":  null,
+                                                                               "HelpLink":  null,
+                                                                               "Source":  null,
+                                                                               "HResult":  -2146233087
+                                                                           },
+                                                             "TargetObject":  null,
+                                                             "CategoryInfo":  {
+                                                                                  "Category":  0,
+                                                                                  "Activity":  "",
+                                                                                  "Reason":  "ParentContainsErrorRecordException",
+                                                                                  "TargetName":  "",
+                                                                                  "TargetType":  ""
+                                                                              },
+                                                             "FullyQualifiedErrorId":  "RuntimeException",
+                                                             "ErrorDetails":  null,
+                                                             "InvocationInfo":  null,
+                                                             "ScriptStackTrace":  null,
+                                                             "PipelineIterationInfo":  [
+
+                                                                                       ]
+                                                         },
+                                         "WasThrownFromThrowStatement":  false,
+                                         "Message":  "C:\\Users\\horne\\Desktop\\Test1\\.venv\\Scripts\\python.exe: No module named playwright",
+                                         "Data":  {
+
+                                                  },
+                                         "InnerException":  null,
+                                         "TargetSite":  null,
+                                         "StackTrace":  null,
+                                         "HelpLink":  null,
+                                         "Source":  null,
+                                         "HResult":  -2146233087
+                                     },
+                       "TargetObject":  "C:\\Users\\horne\\Desktop\\Test1\\.venv\\Scripts\\python.exe: No module named playwright",
+                       "CategoryInfo":  {
+                                            "Category":  0,
+                                            "Activity":  "",
+                                            "Reason":  "RemoteException",
+                                            "TargetName":  "C:\\Users\\horne\\Desktop\\Test1\\.venv\\Scripts\\python.exe: No module named playwright",
+                                            "TargetType":  "String"
+                                        },
+                       "FullyQualifiedErrorId":  "NativeCommandError",
+                       "ErrorDetails":  null,
+                       "InvocationInfo":  {
+                                              "MyCommand":  {
+                                                                "Path":  "C:\\Users\\horne\\Desktop\\Test1\\.venv/Scripts\\python.exe",
+                                                                "Extension":  ".exe",
+                                                                "Definition":  "C:\\Users\\horne\\Desktop\\Test1\\.venv/Scripts\\python.exe",
+                                                                "Source":  "C:\\Users\\horne\\Desktop\\Test1\\.venv/Scripts\\python.exe",
+                                                                "Version":  {
+                                                                                "Major":  3,
+                                                                                "Minor":  13,
+                                                                                "Build":  3150,
+                                                                                "Revision":  1013,
+                                                                                "MajorRevision":  0,
+                                                                                "MinorRevision":  1013
+                                                                            },
+                                                                "Visibility":  0,
+                                                                "OutputType":  [
+                                                                                   {
+                                                                                       "Name":  "System.String",
+                                                                                       "Type":  "string",
+                                                                                       "TypeDefinitionAst":  null
+                                                                                   }
+                                                                               ],
+                                                                "Name":  "python.exe",
+                                                                "CommandType":  32,
+                                                                "ModuleName":  "",
+                                                                "Module":  null,
+                                                                "RemotingCapability":  1,
+                                                                "Parameters":  null,
+                                                                "ParameterSets":  null
+                                                            },
+                                              "BoundParameters":  {
+
+                                                                  },
+                                              "UnboundArguments":  [
+
+                                                                   ],
+                                              "ScriptLineNumber":  1,
+                                              "OffsetInLine":  8,
+                                              "HistoryId":  -1,
+                                              "ScriptName":  "",
+                                              "Line":  "$pw = (python -m playwright --version 2\u003e\u00261)",
+                                              "PositionMessage":  "Au caractère Ligne:1 : 8\r\n+ $pw = (python -m playwright --version 2\u003e\u00261)\r\n+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+                                              "PSScriptRoot":  "",
+                                              "PSCommandPath":  null,
+                                              "InvocationName":  "python",
+                                              "PipelineLength":  0,
+                                              "PipelinePosition":  0,
+                                              "ExpectingInput":  false,
+                                              "CommandOrigin":  1,
+                                              "DisplayScriptPosition":  null
+                                          },
+                       "ScriptStackTrace":  "à \u003cScriptBlock\u003e, \u003cAucun fichier\u003e : ligne 1",
+                       "PipelineIterationInfo":  [
+                                                     0,
+                                                     0
+                                                 ],
+                       "writeErrorStream":  true,
+                       "PSMessageDetails":  null
+                   }
+}

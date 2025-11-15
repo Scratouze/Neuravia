@@ -1,0 +1,13 @@
+[network]
+enabled = true
+allowed_domains = ["*"]
+http_timeout_sec = 30
+
+[modules]
+http = true
+browser = true
+vision = true
+ocr = true
+
+[security]
+shell_allowlist = ["echo", "cmd", "powershell", "python"]

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Neuravia — Fichiers (sandbox)</h1>
+    <div class="badge">lecture seule</div>
+    <nav class="nav">
+      <a href="/">Dashboard</a>
+      <a href="/files" class="active">Fichiers</a>
+    </nav>
+  </header>
+
+  {% if profile == "danger" %}
+  <div class="danger-banner">MODE DANGER — garde-fous réduits. Utiliser uniquement en environnement contrôlé.</div>
+  {% endif %}
+
+  <main class="container">
+    <section>
+      <h2>Contenu du sandbox</h2>
+      <table class="table">
+        <thead><tr><th>Chemin</th><th>Taille</th><th></th></tr></thead>
+        <tbody id="files-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    function humanSize(n){ if(n<1024) return n+' B'; let u=['KB','MB','GB']; let i=-1; do{ n/=1024; i++; } while(n>=1024 && i<u.length-1); return n.toFixed(1)+' '+u[i]; }
+    async function loadFiles(){
+      const js = await fetch('/api/files').then(r=>r.json());
+      const tbody = document.getElementById('files-body');
+      tbody.innerHTML = '';
+      for(const it of js.items){
+        const tr = document.createElement('tr');
+        const a = document.createElement('a');
+        a.href = '/files/download?path=' + encodeURIComponent(it.path);
+        a.textContent = it.path;
+        tr.innerHTML = `<td></td><td>${humanSize(it.size)}</td><td><a href="${a.href}">Télécharger</a></td>`;
+        tr.children[0].appendChild(a);
+        tbody.appendChild(tr);
+      }
+    }
+    loadFiles();
+  </script>
+</body>
+</html>

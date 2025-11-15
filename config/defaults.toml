@@ -1,0 +1,33 @@
+[general]
+profile = "safe"
+os_mode = "auto"
+dry_run = false
+no_confirm = false
+sandbox_path = "data/sandbox"
+log_dir = "data/logs"
+kill_switch_path = "data/kill.switch"
+
+[security]
+# Clé secrète pour signer les journaux chaînés (HMAC). LAISSEZ VIDE si vous ne voulez pas de HMAC.
+# Pour la prod, configurez via variable d'environnement NEURAVIA_CHAIN_SECRET ou éditez ici.
+chain_secret = ""
+
+[network]
+enabled = false
+
+[modules]
+filesystem = true
+process = true
+http = false
+browser = false
+vision = false
+ocr = false
+codeedit = true
+
+[llm]
+local_enabled = true
+remote_enabled = false
+
+[memory]
+db_path = "data/memory.db"
+index_enabled = false

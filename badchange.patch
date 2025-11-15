@@ -1,0 +1,14 @@
+--- a/neuravia/cli.py
++++ b/neuravia/cli.py
+@@ -38,9 +38,9 @@
+         },
+     )
+ 
+-    # 🔧 Rétabli pour compatibilité avec le test: "Phase 3 (config loaded)"
++    # 🔧 Rétabli pour compatibilité avec le test: "PHASE 3 CHANGED"
+     header = (
+-        f"Neuravia-Autonomy v{__version__} — Phase 3 (config loaded)\n"
++        f"Neuravia-Autonomy v{__version__} — PHASE 3 CHANGED\n"
+         f"goal    = {args.goal!r}\n"
+         f"config  = {args.config!r}\n"
+         f"profile = {settings.general.profile}\n"

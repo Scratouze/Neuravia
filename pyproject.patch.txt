@@ -1,0 +1,8 @@
+# Appliquer ces ajouts à ton pyproject.toml :
+#
+# [project.optional-dependencies]
+# dev = ["pytest>=7.4"]
+# web = ["fastapi>=0.115", "uvicorn[standard]>=0.30", "jinja2>=3.1", "httpx>=0.27"]
+#
+# [project.scripts]
+# neuravia-web = "neuravia.web.server:main"

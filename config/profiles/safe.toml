@@ -1,0 +1,6 @@
+[network]
+enabled = false
+allowed_domains = []
+
+[security]
+shell_allowlist = ["echo"]

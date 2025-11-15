@@ -1,0 +1,10 @@
+[network]
+enabled = false
+allowed_domains = ["example.com"]
+http_timeout_sec = 15
+
+[modules]
+http = true
+browser = false
+vision = false
+ocr = false

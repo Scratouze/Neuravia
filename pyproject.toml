@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "neuravia"
+version = "0.1.0"
+description = "Neuravia-Autonomy — IA locale offline-first, multi-agents, orchestrée et sécurisée. (Phase 1: squelettes)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Neuravia", email = "dev@neuravia.local" }]
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+]
+web = ["fastapi>=0.115", "uvicorn[standard]>=0.30", "jinja2>=3.1", "httpx>=0.27"]
+
+[project.scripts]
+neuravia = "neuravia.__main__:main"

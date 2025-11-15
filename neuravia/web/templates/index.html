@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Neuravia — Dashboard local</h1>
+    <div class="badge">offline-first</div>
+    <nav class="nav">
+      <a href="/">Dashboard</a>
+      <a href="/files">Fichiers (sandbox)</a>
+    </nav>
+  </header>
+
+  {% if profile == "danger" %}
+  <div class="danger-banner">MODE DANGER — garde-fous réduits. Utiliser uniquement en environnement contrôlé.</div>
+  {% endif %}
+
+  <main class="container">
+    <section class="cards">
+      <div class="card"><div class="label">Événements</div><div class="value" id="ev">{{ stats.events }}</div></div>
+      <div class="card"><div class="label">Actions</div><div class="value" id="ac">{{ stats.actions }}</div></div>
+      <div class="card"><div class="label">Artéfacts</div><div class="value" id="ar">{{ stats.artifacts }}</div></div>
+    </section>
+
+    <section>
+      <h2>Derniers événements</h2>
+      <table class="table">
+        <thead><tr><th>ID</th><th>Horodatage</th><th>Type</th><th>Niveau</th><th>Message</th></tr></thead>
+        <tbody id="events-body">
+        {% for e in latest %}
+          <tr>
+            <td>{{ e.id }}</td>
+            <td>{{ e.ts }}</td>
+            <td>{{ e.kind }}</td>
+            <td>{{ e.level }}</td>
+            <td>{{ e.message }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    let lastId = 0;
+    function renderEvents(list) {
+      const tbody = document.getElementById('events-body');
+      tbody.innerHTML = '';
+      for (const e of list) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${e.id}</td><td>${e.ts}</td><td>${e.kind}</td><td>${e.level}</td><td>${e.message}</td>`;
+        tbody.appendChild(tr);
+        if (e.id > lastId) lastId = e.id;
+      }
+    }
+    async function refreshStats() {
+      try {
+        const s = await fetch('/api/stats').then(r => r.json());
+        document.getElementById('ev').textContent = s.events;
+        document.getElementById('ac').textContent = s.actions;
+        document.getElementById('ar').textContent = s.artifacts;
+      } catch (e) { console.warn(e); }
+    }
+    async function refreshList() {
+      try {
+        const evs = await fetch('/api/events?limit=10').then(r => r.json());
+        renderEvents(evs);
+      } catch (e) { console.warn(e); }
+    }
+    refreshStats(); refreshList();
+    try {
+      const es = new EventSource('/api/events/stream');
+      es.onmessage = (ev) => { refreshStats(); refreshList(); };
+      es.onerror = (e) => { console.warn('SSE error', e); };
+    } catch (e) { console.warn('SSE unsupported', e); }
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+--- a/neuravia/autoimprove/__init__.py
++++ b/neuravia/autoimprove/__init__.py
+@@ -0,0 +1,2 @@
++"""Auto-am?lioration (patch+tests)."""
++__all__ = []
