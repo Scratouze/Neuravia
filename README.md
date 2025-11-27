@@ -81,5 +81,6 @@ multi‑agents/sécurité (Phase 14).
 
 ------------------------------------------------------------------------
 
-👤 Auteur : JM 📌 Design : offline‑first • sandbox • 100% configurable
+👤 Auteur : Scratouze 📌 Design : offline‑first • sandbox • 100% configurable
 YAML • NO unsafe world ops • tests verts 📅 Version : 0.1‑alpha
+
